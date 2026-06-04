@@ -1,16 +1,24 @@
 /**
- * LOBOLINK CAREER STUDIO - PORTFOLIO ENGINE (MULTI-LANGUAGE EDITION)
+ * LOBOLINK CAREER STUDIO - PORTFOLIO ENGINE (EDICIÓN MULTI-IDIOMA DEFINTIVA)
  * Controlador asíncrono polimórfico para la Terminal de Proyectos de Cesar Bernal.
  */
 
 document.addEventListener("DOMContentLoaded", () => {
     /**
-     * DETECCIÓN DINÁMICA DE IDIOMA:
-     * Si el HTML (como portafolio-en.html) definió una ruta específica en un script previo,
-     * la respeta. Si no existe, inicializa por defecto la ruta en español.
+     * DETECCIÓN INFAVIBLE DE IDIOMA BASADA EN EL DOM:
+     * En lugar de leer la URL que puede variar según el servidor, el script lee directamente 
+     * el atributo 'lang' de la etiqueta <html> del archivo que lo mandó a llamar.
      */
-    const FINAL_URL = (typeof PORTFOLIO_DATA_URL !== "undefined") ? PORTFOLIO_DATA_URL : "data/portafolio.json";
-    fetchPortfolioData(FINAL_URL);
+    const htmlLanguage = document.documentElement.lang.toLowerCase();
+    
+    let finalUrl = "data/portafolio.json"; // Ruta por defecto (Español)
+    
+    if (htmlLanguage === "en" || window.location.pathname.toLowerCase().includes("en")) {
+        finalUrl = "data/portafolio-en.json"; // Cambia al repositorio en Inglés
+    }
+    
+    // Inicializar la petición con la ruta correcta determinada por el entorno
+    fetchPortfolioData(finalUrl);
 });
 
 /**
@@ -21,12 +29,12 @@ async function fetchPortfolioData(url) {
         const response = await fetch(url);
         
         if (!response.ok) {
-            throw new Error(`Código HTTP: ${response.status}. No se pudo inicializar el repositorio de proyectos.`);
+            throw new Error(`Código HTTP: ${response.status}. No se encontró el repositorio JSON correspondiente.`);
         }
         
         const projectsData = await response.json();
         
-        // Renderizar la grilla extendida
+        // Renderizar la grilla extendida pasándole el origen de los datos
         renderProjectsGrid(projectsData);
         
         // Disparar hilos visuales para las tarjetas inyectadas
@@ -54,8 +62,10 @@ function renderProjectsGrid(projects) {
     const gridContainer = document.getElementById("portfolio-grid");
     if (!gridContainer) return;
     
-    // Detectamos si el archivo actual que se ejecuta es la versión en inglés
-    const isEnglish = window.location.pathname.includes("portafolio-en.html");
+    // Detección interna para las etiquetas fijas de las tarjetas
+    const htmlLanguage = document.documentElement.lang.toLowerCase();
+    const isEnglish = (htmlLanguage === "en" || window.location.pathname.toLowerCase().includes("en"));
+    
     const logImpactLabel = isEnglish ? "// LOG_IMPACT:" : "// LOG_DE_IMPACTO:";
     
     let htmlBuffer = "";
@@ -68,7 +78,6 @@ function renderProjectsGrid(projects) {
         htmlBuffer += `
             <div class="skill-module-card reveal-ready" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
                 <div>
-                    <!-- Encabezado de Tarjeta con Imagen Reutilizada o Ficticia -->
                     <div style="width: 100%; height: 160px; overflow: hidden; border-radius: 8px; margin-bottom: 1.5rem; border: 1px solid rgba(255,255,255,0.05); background: #060b11;">
                         <img src="${project.imagen_url}" alt="${project.titulo}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.75; transition: opacity 0.3s;" onerror="this.style.display='none'; this.parentNode.innerHTML='<div class=\\'mono-text\\' style=\\'display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);font-size:0.8rem;\\'>[IMAGE_OFFLINE_SOURCE]</div>'">
                     </div>
@@ -83,7 +92,6 @@ function renderProjectsGrid(projects) {
                     </p>
                 </div>
                 
-                <!-- Bloque Inferior: Métricas de Logro e Infraestructura -->
                 <div>
                     <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1rem; margin-bottom: 1rem; text-align: left;">
                         <div class="mono-text" style="font-size: 0.7rem; color: #00ffcc; margin-bottom: 0.3rem;">${logImpactLabel}</div>
@@ -104,10 +112,11 @@ function renderProjectsGrid(projects) {
 }
 
 /**
- * Implementation of IntersectionObserver for sleek viewport reveal animations
+ * Implementación de IntersectionObserver para animaciones fluidas de aparición en pantalla
  */
 function initializeProjectAnimations() {
     const cards = document.querySelectorAll(".reveal-ready");
+    if (!cards.length) return;
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
