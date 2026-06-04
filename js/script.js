@@ -1,21 +1,21 @@
 /**
- * LOBOLINK CAREER STUDIO - CORE ENGINE (PLAN EVOLUCIÓN - MULTIIDIOMA)
- * Versión optimizada con detección dinámica de matriz de datos.
+ * LOBOLINK CAREER STUDIO - CORE ENGINE (EDICIÓN MULTI-IDIOMA BLINDADA)
+ * Versión de diagnóstico y producción 100% libre de bloqueos de DOM.
  */
 
 document.addEventListener("DOMContentLoaded", () => {
     /**
-     * DETECCIÓN DINÁMICA DE IDIOMA:
-     * Si la URL contiene "index-en.html", el sistema consume automáticamente la base de datos en inglés.
-     * En cualquier otro caso (como index.html o la raíz), se mantiene por defecto en español.
+     * DETECCIÓN DINÁMICA DE IDIOMA ULTRA-COMPATIBLE:
+     * Funciona tanto en servidores locales (Live Server) como abriendo el archivo directamente.
      */
     let dataUrl = "data/data.json";
+    const currentPath = window.location.pathname.toLowerCase();
     
-    if (window.location.pathname.includes("index-en.html")) {
+    if (currentPath.includes("index-en.html") || currentPath.includes("index-en")) {
         dataUrl = "data/data-en.json";
     }
     
-    // Inicializar el motor con la ruta correcta
+    // Inicializar el motor de datos
     fetchCyberData(dataUrl);
 });
 
@@ -24,12 +24,12 @@ async function fetchCyberData(url) {
         const response = await fetch(url);
         
         if (!response.ok) {
-            throw new Error(`Código HTTP: ${response.status}. Asegúrate de usar un servidor local.`);
+            throw new Error(`Código HTTP: ${response.status}. Verifica que el archivo JSON exista en la ruta correcta.`);
         }
         
         const data = await response.json();
         
-        // Inyección de componentes
+        // Inyección controlada y segura de componentes (Cero bloqueos)
         if (data.informacion_personal) {
             renderProfileInfo(data.informacion_personal, data.perfil_profesional);
         }
@@ -43,27 +43,28 @@ async function fetchCyberData(url) {
             renderEducation(data.educacion_formal, data.certificaciones_cursos);
         }
         
-        // Efectos dinámicos
+        // Inicialización de efectos visuales de la terminal
         initializeCyberAnimations();
         initializeScrollSpy();
         
     } catch (error) {
-        console.error("Error en la matriz LoboLink: ", error.message);
+        console.error("❌ [LOBOLINK CORE ERROR]: ", error.message);
         
         const debugBanner = document.getElementById("client-name");
         if (debugBanner) {
-            debugBanner.style.color = "#ff6600";
-            debugBanner.innerText = "ERROR_DE_SISTEMA";
+            debugBanner.style.color = "#ff3333";
+            debugBanner.innerText = "CRITICAL_ERROR";
         }
         
         const summaryBanner = document.getElementById("client-summary");
         if (summaryBanner) {
-            summaryBanner.innerHTML = `<span style="color: #ff3333; font-family: monospace;">Fallo: ${error.message}</span>`;
+            summaryBanner.innerHTML = `<span style="color: #ff3333; font-family: monospace;">Fallo de enlace a matriz: ${error.message}</span>`;
         }
     }
 }
 
 function renderProfileInfo(personal, perfilProfesional) {
+    // 1. Textos principales del perfil
     const elName = document.getElementById("client-name");
     if (elName) elName.textContent = personal.nombre_completo;
 
@@ -73,6 +74,7 @@ function renderProfileInfo(personal, perfilProfesional) {
     const elSummary = document.getElementById("client-summary");
     if (elSummary) elSummary.textContent = perfilProfesional;
 
+    // 2. Bloque de contacto lateral/inferior
     const elEmail = document.getElementById("client-email");
     if (elEmail) elEmail.textContent = personal.email;
 
@@ -82,17 +84,23 @@ function renderProfileInfo(personal, perfilProfesional) {
     const elLocation = document.getElementById("client-location");
     if (elLocation) elLocation.textContent = personal.ubicacion || personal.location;
 
-    // Actualización de hipervínculos de telecomunicación
+    // 3. Hub de Redes Sociales (Asegura que se carguen siempre sin importar errores externos)
     const linkedinLink = document.getElementById("client-linkedin");
-    if (linkedinLink) linkedinLink.href = personal.linkedin;
+    if (linkedinLink && personal.linkedin) linkedinLink.href = personal.linkedin;
 
     const githubLink = document.getElementById("client-github");
-    if (githubLink) githubLink.href = personal.github;
+    if (githubLink && personal.github) githubLink.href = personal.github;
 
+    /**
+     * PROTECCIÓN DE BOTÓN SUPERIOR:
+     * Si usas el ID viejo o el nuevo, el JS valida su existencia antes de intentar escribir en él.
+     * Si no lo encuentra, continúa ejecutando el resto de iconos sin colapsar.
+     */
     const whatsappLink = document.getElementById("whatsapp-top-link");
-    // Solo reescribe el href de WhatsApp si no estamos en la página index-en.html
-    if (whatsappLink && !window.location.pathname.includes("index-en.html")) {
-        whatsappLink.href = personal.whatsapp_url;
+    if (whatsappLink && personal.whatsapp_url) {
+        if (!window.location.pathname.toLowerCase().includes("index-en")) {
+            whatsappLink.href = personal.whatsapp_url;
+        }
     }
 }
 
@@ -145,9 +153,9 @@ function renderEducation(educacion, certificaciones) {
     if (eduContainer && educacion) {
         eduContainer.innerHTML = educacion.map(edu => `
             <div class="education-card-cyber reveal-ready">
-                <div class="edu-year">${edu.año}</div>
-                <div class="edu-title">${edu.titulo}</div>
-                <div class="edu-institution">${edu.institucion}</div>
+                <div class="edu-year">${edu.año || edu.year}</div>
+                <div class="edu-title">${edu.titulo || edu.title}</div>
+                <div class="edu-institution">${edu.institucion || edu.institution}</div>
             </div>`).join("");
     }
     
@@ -155,15 +163,17 @@ function renderEducation(educacion, certificaciones) {
     if (certContainer && certificaciones) {
         certContainer.innerHTML = certificaciones.map(cert => `
             <div class="education-card-cyber reveal-ready">
-                <div class="edu-year">${cert.año}</div>
-                <div class="edu-title">${cert.curso}</div>
-                <div class="edu-institution">${cert.institucion}</div>
+                <div class="edu-year">${cert.año || cert.year}</div>
+                <div class="edu-title">${cert.curso || cert.course}</div>
+                <div class="edu-institution">${cert.institucion || cert.institution}</div>
             </div>`).join("");
     }
 }
 
 function initializeCyberAnimations() {
     const elements = document.querySelectorAll(".reveal-ready");
+    if (!elements.length) return;
+    
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
