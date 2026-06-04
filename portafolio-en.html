@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Terminal | Advanced Portfolio</title>
+    
+    <!-- Ecosystem Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Global Styles Inheritance -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Ambient Layers & Dynamic Glow Spheres -->
+    <div class="cyber-grid-overlay"></div>
+    <div class="neon-glow-sphere sphere-1"></div>
+    <div class="neon-glow-sphere sphere-2"></div>
+
+    <!-- HEADER / CONTROL LAYER NAVIGATION -->
+    <header class="cyber-header">
+        <div class="container header-flex">
+            <div class="system-status">
+                <span class="status-blink"></span>
+                <span class="mono-text">NODE::PROJECT_TERMINAL_2026</span>
+            </div>
+            <nav class="cyber-nav">
+                <ul>
+                    <!-- Clean redirection to the English main index using absolute anchors -->
+                    <li><a href="index-en.html#perfil" class="nav-link"><i class="fa-solid fa-user"></i> Main Profile</a></li>
+                    <li><a href="index-en.html#experiencia" class="nav-link"><i class="fa-solid fa-network-wired"></i> Experience</a></li>
+                    <li><a href="index-en.html#habilidades" class="nav-link"><i class="fa-solid fa-microchip"></i> Skills</a></li>
+                </ul>
+            </nav>
+
+            <!-- MULTILANGUAGE SELECTOR - EN ACTIVE -->
+            <div class="lang-selector-cyber">
+                <a href="portafolio.html" class="lang-btn"><i class="fa-solid fa-globe"></i> ES</a>
+                <span class="lang-separator">|</span>
+                <a href="portafolio-en.html" class="lang-btn active">EN</a>
+            </div>
+
+            <div class="contact-cta">
+                <a href="index-en.html" class="btn-neon-action">
+                    <span><i class="fa-solid fa-arrow-left"></i> BACK</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN SECTOR: FICTIONAL PROJECTS GALLERY -->
+    <main class="hero-cyber-sector" style="padding-top: 8rem;">
+        <div class="container">
+            
+            <!-- Project Section Heading -->
+            <div class="section-heading-cyber" style="margin-bottom: 3rem;">
+                <div class="pre-title mono-text">// DEPLOYMENT_REPOSITORY</div>
+                <h1 class="tech-title" style="font-size: 2.5rem; margin-bottom: 0.5rem;">Infrastructure Projects</h1>
+                <div class="cyber-divider"></div>
+                <p class="profile-summary-p" style="max-width: 700px;">
+                    Practical engineering use cases, simulated network deployments, and system architectures designed under rigorous corporate standards.
+                </p>
+            </div>
+
+            <!-- Dynamic Container for Project Cards -->
+            <div id="portfolio-grid" class="skills-cyber-grid">
+                <!-- JavaScript will asynchronously inject the project cards here -->
+                <div class="mono-text" style="color: var(--neon-cyan);">[INITIALIZING_PROJECT_REPOSITORY...]</div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER TERMINAL -->
+    <footer class="cyber-footer">
+        <div class="container footer-flex-cyber">
+            <div class="footer-brand-tech">
+                <p class="mono-text">LOBOLINK CAREER STUDIO // EXTENDED TERMINAL</p>
+                <p class="copyright-text">&copy; 2026. Modular presentation environment for Systems Engineering.</p>
+            </div>
+            <div class="system-clock-box">
+                <span class="mono-text">DB_SOURCE: <span style="color: var(--neon-cyan);">PORTAFOLIO-EN.JSON</span></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Inline script to force the engine to read the English JSON -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const PORTFOLIO_DATA_URL = "data/portafolio-en.json";
+            fetchPortfolioData(PORTFOLIO_DATA_URL);
+        });
+    </script>
+    <!-- Modular script for asynchronous rendering and animations -->
+    <script src="js/portfolio_engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "PROY-001",
+    "titulo": "Core LAN Migration & VLAN Segmentation",
+    "descripcion": "Design and implementation of a new network architecture with strict VLAN segmentation (Data, Voice, CCTV, and Management) to mitigate broadcast storms and optimize internal traffic performance in corporate SMB environments.",
+    "imagen_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+    "icono": "fa-solid fa-network-wired",
+    "tags": ["LAN / WAN", "VLANS", "DHCP/DNS", "Last Mile"],
+    "metricas": {
+      "rendimiento": "+40% Stability",
+      "seguridad": "Total Network Isolation"
+    }
+  },
+  {
+    "id": "PROY-002",
+    "titulo": "Centralized CCTV & IP Intercom Ecosystem",
+    "descripcion": "Deployment of a comprehensive perimeter security system utilizing Closed-Circuit Television and IP Intercoms over structured UTP cabling organized in a central rack, guaranteeing continuous monitoring and zero video packet loss.",
+    "imagen_url": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80",
+    "icono": "fa-solid fa-video",
+    "tags": ["CCTV", "UTP Cabling", "Intercoms", "Telecom Racks"],
+    "metricas": {
+      "cobertura": "24/7 Monitoring",
+      "infraestructura": "ANSI/TIA Organized Rack"
+    }
+  },
+  {
+    "id": "PROY-003",
+    "titulo": "Network Monitoring Script & Alerts in Python",
+    "descripcion": "Development of an automated automation tool in Python for proactive connectivity diagnostics using network sockets. Executes distributed pings, critical port availability analysis, and storage of technical incident logs.",
+    "imagen_url": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+    "icono": "fa-solid fa-code",
+    "tags": ["Python", "Technical Diagnostics", "Monitoring", "Failure Logs"],
+    "metricas": {
+      "automatizacion": "Immediate Alerts",
+      "eficiencia": "0% Manual Tracert Usage"
+    }
+  },
+  {
+    "id": "PROY-004",
+    "titulo": "Power BI Dashboard for Incident SLA Management",
+    "descripcion": "Structuring of a relational analytical model in Power BI to evaluate technical response performance (L1/L2). Automates the visualization of failure mitigation times and overall network service availability.",
+    "imagen_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    "icono": "fa-solid fa-chart-pie",
+    "tags": ["Power BI", "Data Analysis", "SLA Metrics", "Technical Reports"],
+    "metricas": {
+      "visibilidad": "Interactive Dashboards",
+      "analisis": "Support Optimization"
+    }
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "informacion_personal": {
+    "nombre_completo": "Cesar Enrique Bernal Bueno",
+    "titular_profesional": "Systems Engineer | Networks & Cybersecurity Specialist",
+    "ubicacion": "Bogota, Colombia",
+    "telefono": "312-384-0724",
+    "email": "cebb2586@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/cesar-enrique-bernal-bueno-3aa8aa159",
+    "github": "https://github.com/cesarbernal2026",
+    "whatsapp_url": "https://wa.me/573123840724"
+  },
+  "perfil_profesional": "Systems Engineer in final stage of completion with a solid technical and technological background in systems support, computer science, software development, and network administration (LAN/WAN/WLAN). Specialist with proven experience in diagnosing, monitoring, and resolving complex connectivity incidents in corporate and SMB environments.",
+  "habilidades_modulares": [
+    {
+      "categoria": "Infrastructure & Connectivity",
+      "icono": "fa-solid fa-network-wired",
+      "tecnologias": ["LAN / WAN / WLAN Networks", "VLAN Configuration", "DHCP / DNS Protocols", "FTTH / HFC Technologies"]
+    },
+    {
+      "categoria": "Hardware & Equipment",
+      "icono": "fa-solid fa-microchip",
+      "tecnologias": ["Switches & Routers", "Access Points (APs)", "CCTV Installation", "UTP Structured Cabling"]
+    }
+  ],
+  "experiencia_laboral": [
+    {
+      "empresa": "Fractalia Cencosud",
+      "cargo": "L2 Network Specialist",
+      "periodo": "2026/03/02 - Present",
+      "funciones": [
+        "Diagnosis and troubleshooting of highly complex connectivity incidents in LAN, WAN, and WLAN network environments.",
+        "Technical configuration and deployment of IP addressing, virtual networks (VLANs), DHCP services, DNS, and routing."
+      ]
+    },
+    {
+      "empresa": "Cebernet Soluciones Informaticas",
+      "cargo": "Systems Technology Specialist",
+      "periodo": "2025/12/03 - 2026/03/02",
+      "funciones": [
+        "Comprehensive maintenance of internal networks, intercom services, FTTH, HFC, telephony, internet, and digital television.",
+        "Preventive and corrective maintenance of hardware and software on servers, computer equipment, and network peripherals.",
+        "CCTV deployment, relocation of network points, APs, and last-mile infrastructure equipment."
+      ]
+    }
+  ],
+  "educacion_formal": [
+    {
+      "titulo": "Systems Engineering",
+      "institucion": "Corporacion Unificada Nacional (CUN)",
+      "año": "In progress (10th Semester)"
+    },
+    {
+      "titulo": "Software Development & Networks Technologist",
+      "institucion": "Corporacion Unificada Nacional (CUN)",
+      "año": "2026"
+    }
+  ],
+  "certificaciones_cursos": [
+    {
+      "curso": "Diploma in Engineering Project Design",
+      "institucion": "Corporacion Unificada Nacional (CUN)",
+      "año": "2024"
+    },
+    {
+      "curso": "Python Programming",
+      "institucion": "Banco Santander",
+      "año": "2024"
+    }
+  ]
+}

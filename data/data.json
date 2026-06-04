@@ -1,0 +1,69 @@
+{
+  "informacion_personal": {
+    "nombre_completo": "Cesar Enrique Bernal Bueno",
+    "titular_profesional": "Ingeniero de Sistemas | Especialista en Redes & Ciberseguridad",
+    "ubicacion": "Bogotá, Colombia",
+    "telefono": "312-384-0724",
+    "email": "cebb2586@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/cesar-enrique-bernal-bueno-3aa8aa159",
+    "github": "https://github.com/cesarbernal2026",
+    "whatsapp_url": "portafolio.html"
+  },
+  "perfil_profesional": "Ingeniero de Sistemas en etapa de culminación con sólida formación técnica y tecnológica en soporte de sistemas, informática, desarrollo de software y administración de redes (LAN/WAN/WLAN)[cite: 8]. Especialista con experiencia comprobada en el diagnóstico, monitoreo y resolución de incidentes complejos de conectividad en entornos corporativos y PYMES[cite: 8].",
+  "habilidades_modulares": [
+    {
+      "categoria": "Infraestructura & Conectividad",
+      "icono": "fa-solid fa-network-wired",
+      "tecnologias": ["Redes LAN / WAN / WLAN", "Configuración VLANs", "Protocolos DHCP / DNS", "Tecnologías FTTH / HFC"]
+    },
+    {
+      "categoria": "Hardware & Equipos",
+      "icono": "fa-solid fa-microchip",
+      "tecnologias": ["Switches & Routers", "Access Points (APs)", "Instalación de CCTV", "Cableado Estructurado UTP"]
+    }
+  ],
+  "experiencia_laboral": [
+    {
+      "empresa": "Fractalia Cencosud",
+      "cargo": "Especialista en Redes N2",
+      "periodo": "2026/03/02 - Actualidad",
+      "funciones": [
+        "Diagnóstico y solución de incidentes de conectividad de alta complejidad en entornos de red LAN, WAN y WLAN[cite: 8].",
+        "Configuración y despliegue técnico de direccionamiento IP, redes virtuales (VLANS), servicios DHCP, DNS y enrutamiento[cite: 8]."
+      ]
+    },
+    {
+      "empresa": "Cebernet Soluciones Informáticas",
+      "cargo": "Especialista en Tecnología de Sistemas",
+      "periodo": "2025/12/03 - 2026/03/02",
+      "funciones": [
+        "Mantenimiento integral de redes internas, sistemas de citofonía, redes FTTH, HFC, telefonía, internet y televisión digital[cite: 8].",
+        "Mantenimiento preventivo y correctivo de hardware y software en servidores, equipos de cómputo y periféricos de red[cite: 8]."
+      ]
+    }
+  ],
+  "educacion_formal": [
+    {
+      "titulo": "Ingeniería de Sistemas",
+      "institucion": "Corporación Unificada Nacional (CUN)",
+      "año": "En curso (10° Semestre)"
+    },
+    {
+      "titulo": "Tecnólogo en Desarrollo de Software y Redes",
+      "institucion": "Corporación Unificada Nacional (CUN)",
+      "año": "2026"
+    }
+  ],
+  "certificaciones_cursos": [
+    {
+      "curso": "Diplomado en Diseño de Proyectos de Ingeniería",
+      "institucion": "Corporación Unificada Nacional (CUN)",
+      "año": "2024"
+    },
+    {
+      "curso": "Programación Python",
+      "institucion": "Banco Santander",
+      "año": "2024"
+    }
+  ]
+}

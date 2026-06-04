@@ -1,0 +1,50 @@
+[
+  {
+    "id": "PROY-001",
+    "titulo": "Migración Core LAN & Segmentación VLAN",
+    "descripcion": "Diseño e implementación de una nueva arquitectura de red con segmentación estricta por VLANS (Datos, Voz, CCTV y Gestión) para mitigar fallas de broadcast y optimizar el rendimiento del tráfico interno en entornos corporativos PYME.",
+    "imagen_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+    "icono": "fa-solid fa-network-wired",
+    "tags": ["LAN / WAN", "VLANS", "DHCP/DNS", "Última Milla"],
+    "metricas": {
+      "rendimiento": "+40% Estabilidad",
+      "seguridad": "Aislamiento Total de Redes"
+    }
+  },
+  {
+    "id": "PROY-002",
+    "titulo": "Ecosistema Centralizado de CCTV & Citofonía IP",
+    "descripcion": "Despliegue de un sistema integral de seguridad perimetral mediante Circuitos Cerrados de Televisión y Citofonía IP sobre cableado estructurado UTP peinado en rack central, garantizando monitoreo continuo y cero pérdida de paquetes de video.",
+    "imagen_url": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80",
+    "icono": "fa-solid fa-video",
+    "tags": ["CCTV", "Cableado UTP", "Citofonía", "Racks Telecom"],
+    "metricas": {
+      "cobertura": "Monitoreo 24/7",
+      "infraestructura": "Rack Organizado ANSI/TIA"
+    }
+  },
+  {
+    "id": "PROY-003",
+    "titulo": "Script de Monitoreo de Red & Alertas en Python",
+    "descripcion": "Desarrollo de una herramienta automatizada en Python para el diagnóstico proactivo de conectividad mediante sockets de red. Ejecuta ping distribuido, análisis de disponibilidad de puertos críticos y almacenamiento de logs de incidentes técnicos.",
+    "imagen_url": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+    "icono": "fa-solid fa-code",
+    "tags": ["Python", "Diagnóstico Técnico", "Monitoreo", "Logs de Fallas"],
+    "metricas": {
+      "automatizacion": "Alertas Inmediatas",
+      "eficiencia": "0% Uso Manual de Tracert"
+    }
+  },
+  {
+    "id": "PROY-004",
+    "titulo": "Cuadro de Mando en Power BI para SLA de Incidentes",
+    "descripcion": "Estructuración de un modelo analítico relacional en Power BI para evaluar el rendimiento de respuesta técnico (N1/N2). Automatiza la visualización de tiempos de mitigación de fallas y disponibilidad general de los servicios de red.",
+    "imagen_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    "icono": "fa-solid fa-chart-pie",
+    "tags": ["Power BI", "Análisis de Datos", "Métricas SLA", "Informes Técnicos"],
+    "metricas": {
+      "visibilidad": "Dashboards Interactivos",
+      "analisis": "Optimización de Soporte"
+    }
+  }
+]

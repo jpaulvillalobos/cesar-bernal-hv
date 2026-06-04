@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Profesional | Ecosistema de Ingeniería</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="cyber-grid-overlay"></div>
+    <div class="neon-glow-sphere sphere-1"></div>
+    <div class="neon-glow-sphere sphere-2"></div>
+
+    <header class="cyber-header">
+        <div class="container header-flex">
+            <div class="system-status">
+                <span class="status-blink"></span>
+                <span class="mono-text" id="sys-id">NODE::CESAR_BERNAL_2026</span>
+            </div>
+            <nav class="cyber-nav">
+                <ul>
+                    <li><a href="#perfil" class="nav-link active"><i class="fa-solid fa-terminal"></i> Perfil</a></li>
+                    <li><a href="#experiencia" class="nav-link"><i class="fa-solid fa-network-wired"></i> Experiencia</a></li>
+                    <li><a href="#habilidades" class="nav-link"><i class="fa-solid fa-microchip"></i> Skills</a></li>
+                    <li><a href="#educacion" class="nav-link"><i class="fa-solid fa-user-graduate"></i> Educación</a></li>
+                </ul>
+            </nav>
+            <div class="lang-selector-cyber">
+    <a href="index.html" class="lang-btn active"><i class="fa-solid fa-globe"></i> ES</a>
+    <span class="lang-separator">|</span>
+    <a href="index-en.html" class="lang-btn">EN</a>
+</div>
+            <div class="contact-cta">
+                <a id="whatsapp-top-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-neon-action">
+                    <span>PORTAFOLIO</span>
+                </a>
+                
+            </div>
+        </div>
+    </header>
+
+    <section id="perfil" class="hero-cyber-sector">
+        <div class="container hero-grid">
+            <div class="profile-frame-wrapper">
+                <div class="cyber-avatar-frame">
+                    <!-- CORRECCIÓN 1: Ruta relativa para la imagen (Quitada la barra inicial '/') -->
+                    <img id="client-avatar" src="image/perfil.PNG" alt="Cesar Bernal Bueno" class="profile-avatar">
+                    <div class="corner-element top-left"></div>
+                    <div class="corner-element top-right"></div>
+                    <div class="corner-element bottom-left"></div>
+                    <div class="corner-element bottom-right"></div>
+                </div>
+                <div class="profile-comms">
+                    <p class="mono-text"><i class="fa-solid fa-envelope"></i> <span id="client-email">...</span></p>
+                    <p class="mono-text"><i class="fa-solid fa-phone"></i> <span id="client-phone">...</span></p>
+                    <p class="mono-text"><i class="fa-solid fa-location-dot"></i> <span id="client-location">...</span></p>
+                </div>
+            </div>
+            <div class="hero-text-content">
+                <span class="cyber-badge" id="client-badge">INGENIERÍA DE SISTEMAS & REDES</span>
+                <h1 id="client-name" class="tech-title">LOADING_NAME...</h1>
+                <h2 id="client-title" class="sub-tech-title">LOADING_SPECIALIZATION...</h2>
+                <div class="cyber-divider"></div>
+                <p id="client-summary" class="profile-summary-p">
+                    Cargando núcleo del perfil laboral del candidato desde el repositorio central de LoboLink...
+                </p>
+                <div class="social-cyber-hub">
+                    <a id="client-linkedin" href="#" target="_blank" rel="noopener noreferrer" class="social-icon-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a id="client-github" href="#" target="_blank" rel="noopener noreferrer" class="social-icon-btn"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencia" class="cyber-section">
+        <div class="container">
+            <div class="section-heading-cyber">
+                <div class="pre-title mono-text">// LOG_DE_TRAYECTORIA</div>
+                <h2 class="tech-title-section">Historial de Operaciones</h2>
+            </div>
+            
+            <div id="experience-timeline" class="timeline-cyber-wrapper"></div>
+        </div>
+    </section>
+
+    <section id="habilidades" class="cyber-section alternative-bg">
+        <div class="container">
+            <div class="section-heading-cyber">
+                <div class="pre-title mono-text">// CORE_CAPABILITIES</div>
+                <h2 class="tech-title-section">Optimización Tecnológica</h2>
+            </div>
+            
+            <div id="skills-grid" class="skills-cyber-grid"></div>
+        </div>
+    </section>
+
+    <section id="educacion" class="cyber-section">
+        <div class="container">
+            <div class="section-heading-cyber">
+                <div class="pre-title mono-text">// ACADEMIC_CREDENTIALS</div>
+                <h2 class="tech-title-section">Instrucción y Certificaciones</h2>
+            </div>
+            
+            <div class="education-dual-grid">
+                <div>
+                    <h3 class="block-title-cyber"><i class="fa-solid fa-graduation-cap"></i> Títulos Oficiales</h3>
+                    <div id="education-container" class="cards-stack-cyber"></div>
+                </div>
+                <div>
+                    <h3 class="block-title-cyber"><i class="fa-solid fa-award"></i> Especializaciones & Cursos</h3>
+                    <div id="certifications-container" class="cards-stack-cyber"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cyber-footer">
+        <div class="container footer-flex-cyber">
+            <div class="footer-brand-tech">
+                <p class="mono-text">LOBOLINK CAREER STUDIO // PLAN EVOLUCIÓN</p>
+                <p class="copyright-text">&copy; 2026. Todos los derechos reservados. Despliegue de infraestructura optimizado con IA.</p>
+            </div>
+            <div class="system-clock-box">
+                <span class="mono-text">STATUS: <span style="color: #00ffcc;">ONLINE</span></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CORRECCIÓN 2: Ruta relativa para el motor JS (Cambió de '/js/script.js' a 'js/script.js') -->
+    <script src="js/script.js"></script>
+</body>
+</html>
