@@ -1,12 +1,22 @@
 /**
- * LOBOLINK CAREER STUDIO - CORE ENGINE (PLAN EVOLUCIÓN)
- * Versión de diagnóstico corregida 100% libre de errores sintácticos.
+ * LOBOLINK CAREER STUDIO - CORE ENGINE (PLAN EVOLUCIÓN - MULTIIDIOMA)
+ * Versión optimizada con detección dinámica de matriz de datos.
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Ruta de acceso al archivo local de datos
-    const DATA_URL = "data/data.json";
-    fetchCyberData(DATA_URL);
+    /**
+     * DETECCIÓN DINÁMICA DE IDIOMA:
+     * Si la URL contiene "index-en.html", el sistema consume automáticamente la base de datos en inglés.
+     * En cualquier otro caso (como index.html o la raíz), se mantiene por defecto en español.
+     */
+    let dataUrl = "data/data.json";
+    
+    if (window.location.pathname.includes("index-en.html")) {
+        dataUrl = "data/data-en.json";
+    }
+    
+    // Inicializar el motor con la ruta correcta
+    fetchCyberData(dataUrl);
 });
 
 async function fetchCyberData(url) {
@@ -40,7 +50,6 @@ async function fetchCyberData(url) {
     } catch (error) {
         console.error("Error en la matriz LoboLink: ", error.message);
         
-        // CORRECCIÓN LÍNEA 55: Sintaxis limpia usando '=' en lugar de ':'
         const debugBanner = document.getElementById("client-name");
         if (debugBanner) {
             debugBanner.style.color = "#ff6600";
@@ -67,8 +76,6 @@ function renderProfileInfo(personal, perfilProfesional) {
     const elEmail = document.getElementById("client-email");
     if (elEmail) elEmail.textContent = personal.email;
 
-    // CONTROL INTELIGENTE MULTI-IDIOMA PARA EL TELÉFONO:
-    // Mapea 'telefono' (Json ES) o 'telephone' si se cambiara en el futuro de forma nativa
     const elPhone = document.getElementById("client-phone");
     if (elPhone) elPhone.textContent = personal.telefono || personal.telephone || "N/A";
 
@@ -84,7 +91,6 @@ function renderProfileInfo(personal, perfilProfesional) {
 
     const whatsappLink = document.getElementById("whatsapp-top-link");
     // Solo reescribe el href de WhatsApp si no estamos en la página index-en.html
-    // Esto evita que destruya el enlace estático hacia 'portafolio-en.html' que pusimos en el header inglés
     if (whatsappLink && !window.location.pathname.includes("index-en.html")) {
         whatsappLink.href = personal.whatsapp_url;
     }
